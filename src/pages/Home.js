@@ -6,6 +6,10 @@ import HookUseEffect from '../componets/HookUseEffect'
 import { useContext } from 'react'
 import { SomeContext } from '../componets/HookUseContext'
 import HookUseRef from '../componets/HookUseRef'
+import HookUseCallback from '../componets/HookUseCallback'
+import HookUseMemo from '../componets/HookUseMemo'
+import HookUseLayoutEffect from '../componets/HookUseLayoutEffect'
+import HookUseImperativeHandle from '../componets/HookUseImperativeHandle'
 
 const Home = () => {
 
@@ -20,6 +24,10 @@ const Home = () => {
       <p>{contextValue}</p>
       <hr />
       <HookUseRef/>
+      <HookUseCallback/>
+      <HookUseMemo/>
+      <HookUseLayoutEffect/>
+      <HookUseImperativeHandle/>
     </div>
   )
 }
