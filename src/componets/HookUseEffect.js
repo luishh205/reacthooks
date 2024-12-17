@@ -3,7 +3,7 @@ import {useEffect,useState} from 'react'
 const HookUseEffect = () => {
     //useEffect sem dependecias
     useEffect(()=>{
-        console.log("estou sendo executado!")
+        //console.log("estou sendo executado!")
     })
 
     const [number, setNumber] = useState(1)
@@ -14,26 +14,25 @@ const HookUseEffect = () => {
 
     //array de depd. vazio
     useEffect(() =>{
-        console.log("Array vazio apenas 1 vez")
+        //console.log("Array vazio apenas 1 vez")
     }, [])
 
     //array com itens de depd.
     const [anotherNumber, setAnotherNumber] = useState(0)
     useEffect(() =>{
         if(anotherNumber > 0){
-            console.log("Array com dep. anotherNumber")
+            //console.log("Array com dep. anotherNumber")
         }
     }, [anotherNumber]);
 
     //Cleanup do useeffect
     useEffect(()=>{
         const timer = setTimeout(()=>{
-            console.log("ola")
+            //console.log("ola")
             //setAnotherNumber(anotherNumber + 1)
         },2000);
 
-
-        //return () => clearTimeout(timer)
+        return () => clearTimeout(timer)
     },[anotherNumber])
 
   return (
